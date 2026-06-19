@@ -84,10 +84,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { title: "Thorne & Associates — Strategic Legal Counsel" },
       { name: "description", content: "Personal-brand law practice for complex litigation, regulatory defense, and high-stakes advisory. Confidential consultations by appointment." },
       { property: "og:title", content: "Thorne & Associates — Strategic Legal Counsel" },
-      { property: "og:description", content: "Personal-brand law practice for complex litigation, regulatory defense, and high-stakes advisory." },
+      { property: "og:description", content: "Personal-brand law practice for complex litigation, regulatory defense, and high-stakes advisory. Confidential consultations by appointment." },
       { property: "og:site_name", content: "Thorne & Associates" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Thorne & Associates — Strategic Legal Counsel" },
+      { name: "twitter:description", content: "Personal-brand law practice for complex litigation, regulatory defense, and high-stakes advisory. Confidential consultations by appointment." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/39c260e7-b14c-4ef0-8572-2e1ecf43fbe7/id-preview-1f44d3f0--a71445bc-47c9-4e48-a2da-3cbe1efe6214.lovable.app-1781907427285.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/39c260e7-b14c-4ef0-8572-2e1ecf43fbe7/id-preview-1f44d3f0--a71445bc-47c9-4e48-a2da-3cbe1efe6214.lovable.app-1781907427285.png" },
     ],
     links: [
       {
