@@ -70,7 +70,6 @@ function PracticeAreasPage() {
                   </ul>
                   <Link
                     to="/contact"
-                    search={{ matter: p.title } as never}
                     className="mt-8 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-gold transition-colors hover:text-navy"
                   >
                     Discuss this matter <ArrowUpRight className="size-3.5" />

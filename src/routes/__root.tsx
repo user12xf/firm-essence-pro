@@ -14,6 +14,7 @@ import { reportLovableError } from "../lib/lovable-error-reporting";
 import { SiteNav } from "@/components/site/SiteNav";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { StickyCTA } from "@/components/site/StickyCTA";
+import { Toaster } from "@/components/ui/sonner";
 
 function NotFoundComponent() {
   return (
@@ -145,6 +146,7 @@ function RootComponent() {
       </main>
       <SiteFooter />
       <StickyCTA />
+      <Toaster richColors position="bottom-right" />
     </QueryClientProvider>
   );
 }
