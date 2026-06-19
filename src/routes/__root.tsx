@@ -11,6 +11,10 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { SiteNav } from "@/components/site/SiteNav";
+import { SiteFooter } from "@/components/site/SiteFooter";
+import { StickyCTA } from "@/components/site/StickyCTA";
+import { Toaster } from "@/components/ui/sonner";
 
 function NotFoundComponent() {
   return (
@@ -77,19 +81,37 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Thorne & Associates — Strategic Legal Counsel" },
+      { name: "description", content: "Personal-brand law practice for complex litigation, regulatory defense, and high-stakes advisory. Confidential consultations by appointment." },
+      { property: "og:title", content: "Thorne & Associates — Strategic Legal Counsel" },
+      { property: "og:description", content: "Personal-brand law practice for complex litigation, regulatory defense, and high-stakes advisory." },
+      { property: "og:site_name", content: "Thorne & Associates" },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
       {
         rel: "stylesheet",
         href: appCss,
+      },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap",
+      },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LegalService",
+          name: "Thorne & Associates",
+          areaServed: ["New York", "London"],
+          description: "Personal-brand law practice for complex litigation, regulatory defense, and high-stakes advisory.",
+          priceRange: "$$$$",
+        }),
       },
     ],
   }),
@@ -118,8 +140,13 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-      <Outlet />
+      <SiteNav />
+      <main className="min-h-screen">
+        <Outlet />
+      </main>
+      <SiteFooter />
+      <StickyCTA />
+      <Toaster richColors position="bottom-right" />
     </QueryClientProvider>
   );
 }
