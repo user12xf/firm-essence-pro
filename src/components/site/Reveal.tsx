@@ -1,6 +1,15 @@
 import { motion, type Variants } from "motion/react";
 import type { ReactNode } from "react";
 
+const TAGS = {
+  div: motion.div,
+  section: motion.section,
+  li: motion.li,
+  p: motion.p,
+  h2: motion.h2,
+  h3: motion.h3,
+} as const;
+
 const variants: Variants = {
   hidden: { opacity: 0, y: 24 },
   visible: (i: number) => ({
@@ -19,9 +28,9 @@ export function Reveal({
   children: ReactNode;
   delay?: number;
   className?: string;
-  as?: "div" | "section" | "li" | "p" | "h2" | "h3";
+  as?: keyof typeof TAGS;
 }) {
-  const MotionTag = motion(As as never);
+  const MotionTag = TAGS[As];
   return (
     <MotionTag
       className={className}
