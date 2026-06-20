@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import portrait from "@/assets/attorney-portrait.jpg";
+import portrait from "@/assets/attorney-portrait.jpeg";
 import { Reveal } from "@/components/site/Reveal";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { AWARDS, FIRM, TIMELINE } from "@/lib/site-data";
@@ -60,7 +60,7 @@ function AboutPage() {
 function PortraitHero() {
   return (
     <section className="pb-20 pt-16 md:pb-28 md:pt-24">
-      <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-12 lg:items-end">
+      <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-12 lg:items-center">
         <Reveal className="lg:col-span-7">
           <p className="eyebrow flex items-center gap-3">
             <span className="rule-gold" aria-hidden /> The Partner
