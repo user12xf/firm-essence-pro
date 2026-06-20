@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight, Award, ShieldCheck, Sparkles } from "lucide-react";
-import portrait from "@/assets/attorney-portrait.jpg";
+import portrait from "@/assets/attorney-portrait.jpeg";
 import { Reveal } from "@/components/site/Reveal";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { StatCounter } from "@/components/site/StatCounter";
@@ -43,7 +43,7 @@ function HomePage() {
 function HeroSection() {
   return (
     <section className="relative overflow-hidden pb-24 pt-16 md:pt-24">
-      <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-12 lg:items-end">
+      <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-12 lg:items-center">
         <Reveal className="lg:col-span-7">
           <p className="eyebrow flex items-center gap-3">
             <span className="rule-gold" aria-hidden /> White-Collar Defense & Strategic Advisory
